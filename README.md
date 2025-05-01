@@ -16,10 +16,10 @@ This project contains ROS 2 nodes for controlling the **RoArm-M2-S** robotic arm
 ```
 ros2_ws/
 ├── src/
-│   ├── roarm_driver/           # Node 1: reads joint angles and publishes to ROS 2
+│   ├── my_robot_controller/          
 │   │   └── roarm_driver.py
-│   └── roarm_driver2/          # Node 2: subscribes and sends joint commands
-│       └── roarm_driver2.py
+│   │   └── roarm_driver2.py         
+│   ├── ...    
 ├── install/
 ├── build/
 ├── ...
@@ -58,7 +58,7 @@ source install/setup.bash
 
 ---
 
-### ▶️ How to Run
+###  How to Run
 
 #### 1. Start the feedback node
 
@@ -92,14 +92,14 @@ ros2 topic pub --once /torque_ctrl std_msgs/Bool "{data: true}"
 
 ---
 
-### 📡 ROS 2 Topics
+###  ROS 2 Topics
 
 - `/joint_feedback` (`sensor_msgs/JointState`) — publishes joint angles
 - `/torque_ctrl` (`std_msgs/Bool`) — controls motor torque state
 
 ---
 
-### ⚠️ Notes
+###  Notes
 
 - Check that `/dev/ttyUSB0` is the correct port and accessible
 - Default baud rate is `115200`, must match microcontroller configuration
