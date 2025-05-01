@@ -1,0 +1,27 @@
+[0.610s] Invoking command in '/home/arsen/ros2_ws/src/my_robot_controller': PYTHONPATH=/home/arsen/ros2_ws/build/my_robot_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arsen/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_robot_controller build --build-base /home/arsen/ros2_ws/build/my_robot_controller/build install --record /home/arsen/ros2_ws/build/my_robot_controller/install.log --single-version-externally-managed install_data
+[0.849s] running egg_info
+[0.849s] writing ../../build/my_robot_controller/my_robot_controller.egg-info/PKG-INFO
+[0.849s] writing dependency_links to ../../build/my_robot_controller/my_robot_controller.egg-info/dependency_links.txt
+[0.850s] writing entry points to ../../build/my_robot_controller/my_robot_controller.egg-info/entry_points.txt
+[0.850s] writing requirements to ../../build/my_robot_controller/my_robot_controller.egg-info/requires.txt
+[0.850s] writing top-level names to ../../build/my_robot_controller/my_robot_controller.egg-info/top_level.txt
+[0.851s] reading manifest file '../../build/my_robot_controller/my_robot_controller.egg-info/SOURCES.txt'
+[0.852s] writing manifest file '../../build/my_robot_controller/my_robot_controller.egg-info/SOURCES.txt'
+[0.852s] running build
+[0.852s] running build_py
+[0.852s] copying my_robot_controller/turtle_controller.py -> /home/arsen/ros2_ws/build/my_robot_controller/build/lib/my_robot_controller
+[0.853s] running install
+[0.853s] running install_lib
+[0.854s] copying /home/arsen/ros2_ws/build/my_robot_controller/build/lib/my_robot_controller/turtle_controller.py -> /home/arsen/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my_robot_controller
+[0.854s] byte-compiling /home/arsen/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my_robot_controller/turtle_controller.py to turtle_controller.cpython-310.pyc
+[0.855s] running install_data
+[0.855s] running install_egg_info
+[0.856s] removing '/home/arsen/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my_robot_controller-0.0.0-py3.10.egg-info' (and everything under it)
+[0.857s] Copying ../../build/my_robot_controller/my_robot_controller.egg-info to /home/arsen/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my_robot_controller-0.0.0-py3.10.egg-info
+[0.857s] running install_scripts
+[0.875s] Installing draw_circle script to /home/arsen/ros2_ws/install/my_robot_controller/lib/my_robot_controller
+[0.875s] Installing pose_subscriber script to /home/arsen/ros2_ws/install/my_robot_controller/lib/my_robot_controller
+[0.875s] Installing test_node script to /home/arsen/ros2_ws/install/my_robot_controller/lib/my_robot_controller
+[0.876s] Installing turtle_controller script to /home/arsen/ros2_ws/install/my_robot_controller/lib/my_robot_controller
+[0.876s] writing list of installed files to '/home/arsen/ros2_ws/build/my_robot_controller/install.log'
+[0.895s] Invoked command in '/home/arsen/ros2_ws/src/my_robot_controller' returned '0': PYTHONPATH=/home/arsen/ros2_ws/build/my_robot_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arsen/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_robot_controller build --build-base /home/arsen/ros2_ws/build/my_robot_controller/build install --record /home/arsen/ros2_ws/build/my_robot_controller/install.log --single-version-externally-managed install_data

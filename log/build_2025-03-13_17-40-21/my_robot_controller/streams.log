@@ -1,0 +1,18 @@
+[0.520s] Invoking command in '/home/arsen/ros2_ws/build/my_robot_controller': PYTHONPATH=/home/arsen/ros2_ws/build/my_robot_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arsen/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/arsen/ros2_ws/build/my_robot_controller/build --no-deps symlink_data
+[0.752s] running develop
+[0.901s] running egg_info
+[0.901s] writing my_robot_controller.egg-info/PKG-INFO
+[0.901s] writing dependency_links to my_robot_controller.egg-info/dependency_links.txt
+[0.901s] writing entry points to my_robot_controller.egg-info/entry_points.txt
+[0.902s] writing requirements to my_robot_controller.egg-info/requires.txt
+[0.902s] writing top-level names to my_robot_controller.egg-info/top_level.txt
+[0.904s] reading manifest file 'my_robot_controller.egg-info/SOURCES.txt'
+[0.904s] writing manifest file 'my_robot_controller.egg-info/SOURCES.txt'
+[0.905s] running build_ext
+[0.906s] Creating /home/arsen/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my-robot-controller.egg-link (link to .)
+[0.906s] Installing draw_circle script to /home/arsen/ros2_ws/install/my_robot_controller/lib/my_robot_controller
+[0.907s] Installing test_node script to /home/arsen/ros2_ws/install/my_robot_controller/lib/my_robot_controller
+[0.907s] 
+[0.907s] Installed /home/arsen/ros2_ws/build/my_robot_controller
+[0.907s] running symlink_data
+[0.930s] Invoked command in '/home/arsen/ros2_ws/build/my_robot_controller' returned '0': PYTHONPATH=/home/arsen/ros2_ws/build/my_robot_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arsen/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/arsen/ros2_ws/build/my_robot_controller/build --no-deps symlink_data
