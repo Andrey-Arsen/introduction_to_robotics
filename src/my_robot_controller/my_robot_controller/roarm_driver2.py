@@ -104,78 +104,8 @@ class RoarmDriver(Node):
             self.get_logger().error(f"{serial_port_name}：{e}")
             return
 
-        self.joint_states_sub = self.create_subscription(JointState, 'joint_feedback', self.joint_states_callback,10)  
-        self.pose_sub = self.create_subscription(Pose, 'hand_pose', self.pose_callback,10)
-        self.led_ctrl_sub = self.create_subscription(Float32, 'led_ctrl', self.led_ctrl_callback, 10)
         self.joint_feedback_sub = self.create_subscription(JointState, 'joint_feedback', self.joint_states_feedback,10)
 
-
-                           
-    def joint_states_callback(self, msg):
-
-        header = {
-            'stamp': {
-                'sec': msg.header.stamp.sec,
-                'nanosec': msg.header.stamp.nanosec,
-            },
-            'frame_id': msg.header.frame_id,
-        }
-        
-        name = msg.name
-        position = msg.position
-        velocity = msg.velocity
-        effort = msg.effort
-
-        base = -msg.position[msg.name.index('base')]
-        shoulder = -msg.position[msg.name.index('shoulder')]
-        elbow = msg.position[msg.name.index('elbow')]
-        hand = 3.1415926 - msg.position[msg.name.index('hand')]
-
-        
-        data = json.dumps({
-            'T': 102, 
-            'base': base, 
-            'shoulder': shoulder, 
-            'elbow': elbow, 
-            'hand': hand, 
-            'spd':0,
-            'acc': 10
-        }) + "\n"
-        
-        try:
-            self.serial_port.write(data.encode())
-            time.sleep(0.05)
-        except SerialException as e:
-            self.get_logger().error(f"{e}")
-
-    def pose_callback(self, msg):
-        try:
-            request_data = json.dumps({'T': 105}) + "\n"
-            self.serial_port.write(request_data.encode())
-            self.base_controller = BaseController(serial_port, 115200)
-            time.sleep(0.1)
-            self.base_controller.feedback_data()
-            
-            if self.base_controller.base_data["T"] == 1051:
-               feedback = self.base_controller.base_data
-               feedback['x'] /= 1000 
-               feedback['y'] /= 1000
-               feedback['z'] /= 1000  
-               if float(feedback["x"]) != 0.0 or float(feedback["y"]) != 0.0 or float(feedback["z"]) != 0.0:
-                  self.get_logger().info(f'Received feedback from serial port: {feedback}')
-            time.sleep(0.1)
-
-        except Exception as e:
-            self.get_logger().error(f'Error communicating with serial port: {str(e)}')
-
-    def led_ctrl_callback(self, msg):
-        data = msg.data
-        
-        led_ctrl_data = json.dumps({
-            'T': 114, 
-            "led": data,
-        }) + "\n"    
-        self.serial_port.write(led_ctrl_data.encode())
 
     def joint_states_feedback(self, msg):
         base = msg.position[msg.name.index('base')]
